@@ -1,5 +1,5 @@
 {
-  "name": "lackhurt/laravel-apollo",
+  "name": "elemenx/laravel-apollo",
   "description": "Apollo agent for laravel.",
   "license": "MIT",
   "authors": [
@@ -10,8 +10,8 @@
   ],
   "require": {
     "lackhurt/apollo-client": "^0.1.4",
-    "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x",
-    "illuminate/console": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x"
+    "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x|6.0.x|7.*",
+    "illuminate/console": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x|6.0.x|7.*"
   },
   "autoload": {
     "psr-4": {
