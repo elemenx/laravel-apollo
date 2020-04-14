@@ -5,6 +5,6 @@ return [
     'cluster' => env('APOLLO_CLUSTER', 'default'),
     'save_dir' => realpath(storage_path('apollo')),
     'config_server' => env('APOLLO_CONFIG_SERVER', 'http://192.168.100.184:8090'),
-    'app_id' => env('APP_ID'),
+    'appid' => env('APOLLO_APPID'),
     'timeout_interval' => 70
 ];

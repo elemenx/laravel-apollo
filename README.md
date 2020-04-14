@@ -23,8 +23,8 @@ php artisan vendor:publish --provider="ElemenX\Apollo\Providers\ApolloServicePro
 
 Edit .env
 ```properties
-APP_ID=your app id
-CLUSTER=default
+APOLLO_APPID=your app id
+APOLLO_CLUSTER=default
 APOLLO_NAMESPACES="application, common_ns, others"
 APOLLO_CONFIG_SERVER=http://apollometa:8090
 ```

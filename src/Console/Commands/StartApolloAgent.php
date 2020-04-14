@@ -46,7 +46,7 @@ class StartApolloAgent extends Command
             throw new \Exception('ConfigServer must be specified!');
         }
 
-        if (empty(Config::get('apollo.app_id'))) {
+        if (empty(Config::get('apollo.appid'))) {
             throw new \Exception('AppId must be specified!');
         }
 
@@ -58,7 +58,7 @@ class StartApolloAgent extends Command
             }, Config::get('apollo.namespaces'));
         }
 
-        $apolloClient = new ApolloClient(Config::get('apollo.config_server'), Config::get('apollo.app_id'), $namespaces);
+        $apolloClient = new ApolloClient(Config::get('apollo.config_server'), Config::get('apollo.appid'), $namespaces);
         $apolloClient->setIntervalTimeout(Config::get('apollo.timeout_interval'));
         $apolloClient->setSaveDir(Config::get('apollo.save_dir'));
 
