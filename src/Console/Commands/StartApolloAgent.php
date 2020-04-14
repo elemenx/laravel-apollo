@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
 use ElemenX\Apollo\ConfigReader;
-use Org\Multilinguals\Apollo\Client\ApolloClient;
+use ElemenX\ApolloClient\ApolloClient;
 
 class StartApolloAgent extends Command
 {
@@ -61,6 +61,7 @@ class StartApolloAgent extends Command
         $apolloClient = new ApolloClient(Config::get('apollo.config_server'), Config::get('apollo.appid'), $namespaces);
         $apolloClient->setIntervalTimeout(Config::get('apollo.timeout_interval'));
         $apolloClient->setSaveDir(Config::get('apollo.save_dir'));
+        $apolloClient->setAccessKeySecret(Config::get('apollo.access_key_secret'));
 
         $mode = $this->option('mode');
         if($mode == 'env') {

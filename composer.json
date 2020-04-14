@@ -6,10 +6,14 @@
     {
       "name": "lackhurt",
       "email": "pangjn@yeah.net"
+    },
+    {
+      "name": "branchzero",
+      "email": "branchzero@elemenx.com"
     }
   ],
   "require": {
-    "lackhurt/apollo-client": "^0.1.4",
+    "elemenx/apollo-client": "^0.1.5",
     "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x|6.0.x|7.*",
     "illuminate/console": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x|6.0.x|7.*"
   },
