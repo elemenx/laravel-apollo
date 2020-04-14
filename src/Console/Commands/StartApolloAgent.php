@@ -1,11 +1,11 @@
 <?php
 
-namespace Lackhurt\Apollo\Console\Commands;
+namespace ElemenX\Apollo\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
-use Lackhurt\Apollo\ConfigReader;
+use ElemenX\Apollo\ConfigReader;
 use Org\Multilinguals\Apollo\Client\ApolloClient;
 
 class StartApolloAgent extends Command

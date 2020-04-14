@@ -3,22 +3,22 @@
 ## Installation
 Install the package via composer
 ```bash
-composer require lackhurt/laravel-apollo
+composer require elemenx/laravel-apollo
 ```
 
 Add serviceProvider
 ```php
-Lackhurt\Apollo\Providers\ApolloServiceProvider::class
+ElemenX\Apollo\Providers\ApolloServiceProvider::class
 ```
 
 Add facade
 ```php
-'Apollo' => Lackhurt\Apollo\Facades\Apollo::class
+'Apollo' => ElemenX\Apollo\Facades\Apollo::class
 ```
 
 Publish ServiceProvider
 ```php
-php artisan vendor:publish --provider="Lackhurt\Apollo\Providers\ApolloServiceProvider"
+php artisan vendor:publish --provider="ElemenX\Apollo\Providers\ApolloServiceProvider"
 ```
 
 Edit .env

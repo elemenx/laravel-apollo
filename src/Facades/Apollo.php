@@ -1,6 +1,6 @@
 <?php
 
-namespace Lackhurt\Apollo\Facades;
+namespace ElemenX\Apollo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

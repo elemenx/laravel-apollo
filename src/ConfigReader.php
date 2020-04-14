@@ -1,6 +1,6 @@
 <?php
 
-namespace Lackhurt\Apollo;
+namespace ElemenX\Apollo;
 
 
 class ConfigReader

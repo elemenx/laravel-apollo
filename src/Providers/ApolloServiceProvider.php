@@ -1,10 +1,10 @@
 <?php
 
-namespace Lackhurt\Apollo\Providers;
+namespace ElemenX\Apollo\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Lackhurt\Apollo\ConfigReader;
-use Lackhurt\Apollo\Console\Commands\StartApolloAgent;
+use ElemenX\Apollo\ConfigReader;
+use ElemenX\Apollo\Console\Commands\StartApolloAgent;
 
 class ApolloServiceProvider extends ServiceProvider
 {

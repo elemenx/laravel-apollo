@@ -21,10 +21,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Lackhurt\\Apollo\\Providers\\ApolloServiceProvider"
+        "ElemenX\\Apollo\\Providers\\ApolloServiceProvider"
       ],
       "aliases": {
-        "Apollo": "Lackhurt\\Apollo\\ApolloFacade"
+        "Apollo": "ElemenX\\Apollo\\ApolloFacade"
       }
     }
   }
