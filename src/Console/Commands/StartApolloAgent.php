@@ -82,7 +82,7 @@ class StartApolloAgent extends Command
 
         $error = $apolloClient->start(function () {
             if (Config::get('swoole_http') || Config::get('swoole_websocket')) {
-                Artisan::call('swoole:http reload');
+                Artisan::call('swoole:http', ['reload' => true]);
             }
         });
         Log::error($error);
