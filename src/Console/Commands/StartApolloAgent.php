@@ -5,6 +5,7 @@ namespace ElemenX\Apollo\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Artisan;
 use ElemenX\Apollo\ConfigReader;
 use ElemenX\ApolloClient\ApolloClient;
 
@@ -24,7 +25,6 @@ class StartApolloAgent extends Command
      */
     protected $description = 'Start apollo agent. ';
 
-
     /**
      * @var ApolloClient
      */
@@ -40,8 +40,8 @@ class StartApolloAgent extends Command
         parent::__construct();
     }
 
-
-    private function initApolloClient() {
+    private function initApolloClient()
+    {
         if (empty(Config::get('apollo.config_server'))) {
             throw new \Exception('ConfigServer must be specified!');
         }
@@ -53,7 +53,7 @@ class StartApolloAgent extends Command
         if (empty(Config::get('apollo.namespaces'))) {
             $namespaces = ['application'];
         } else {
-            $namespaces = array_map(function($namespace) {
+            $namespaces = array_map(function ($namespace) {
                 return trim($namespace);
             }, Config::get('apollo.namespaces'));
         }
@@ -64,7 +64,7 @@ class StartApolloAgent extends Command
         $apolloClient->setAccessKeySecret(Config::get('apollo.access_key_secret'));
 
         $mode = $this->option('mode');
-        if($mode == 'env') {
+        if ($mode == 'env') {
             $apolloClient->setModifyEnv(true);
         }
 
@@ -78,10 +78,13 @@ class StartApolloAgent extends Command
      */
     public function handle()
     {
-
         $apolloClient = $this->initApolloClient();
 
-        $error = $apolloClient->start();
+        $error = $apolloClient->start(function () {
+            if (Config::get('swoole_http') || Config::get('swoole_websocket')) {
+                Artisan::cell('swoole:http reload');
+            }
+        });
         Log::error($error);
         return false;
     }
